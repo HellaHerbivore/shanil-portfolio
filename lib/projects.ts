@@ -139,6 +139,28 @@ const pocketSanctuarySections: ProjectSection[] = [
   },
 ];
 
+const animalProfilesSections: ProjectSection[] = [
+  {
+    heading: "Strategy",
+    paragraphs: [
+      "This project is not a finished product, but a simple exercise I made while learning web-based game design tools. As I was building Pocket Sanctuary, I hit a few walls. That game needs to live on app stores where you have to fight for attention. More importantly, it is a heavy download that does not run well on older or cheaper phones. To solve this, I began learning Three.JS, a web framework that lets me build pieces straight for the internet, skipping the app store entirely. These works can be tucked in anywhere, from a QR code to a donation checkout page. They are lightning fast and make it very easy for someone to start helping animals.",
+      "For this exercise, I was teaching myself how to handle a spinning camera and how to show many pictures at once while keeping the quality sharp. This early practice grew into a bigger product because I started thinking about how this could be a fresh way for animal charities to thank their donors.",
+    ],
+  },
+  {
+    heading: "Design Method",
+    paragraphs: [
+      "I wanted to showcase happy animals using photographs from WeAnimals. However, I ran into a hurdle with sea life. Most pictures of sea animals, like shrimp, show them in captivity. To get around this, I used AI tools to create images that show people what a thriving, free sea being looks like in the wild.",
+    ],
+  },
+  {
+    heading: "Design Elements",
+    paragraphs: [
+      "The piece features an orbiting camera that lets the user glide smoothly around the space. I set the animals against a soft gradient background to keep the focus on them. Even with high-resolution images, the page is built to load fast and give the user a lag-free experience.",
+    ],
+  },
+];
+
 export const projects: Project[] = [
   {
     slug: "playthical",
@@ -190,7 +212,7 @@ export const projects: Project[] = [
   },
   {
     slug: "animal-profiles",
-    title: "Animal Profiles — Impact of a Donation",
+    title: "Animal Profiles — Impact of a Donation (Exercise)",
     blurb: "Interactive donation impact tracker.",
     category: "Data Viz / Web",
     year: "2024",
@@ -203,7 +225,7 @@ export const projects: Project[] = [
       "/projects/animal-profiles/2.png",
       "/projects/animal-profiles/3.png",
     ],
-    sections: sections(),
+    sections: animalProfilesSections,
   },
   {
     slug: "pocket-sanctuary",
