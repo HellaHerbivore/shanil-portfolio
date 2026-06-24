@@ -29,23 +29,6 @@ export type Project = {
   sections: ProjectSection[];
 };
 
-const LOREM_STRATEGY =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.";
-
-const LOREM_METHOD =
-  "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris.";
-
-const LOREM_ELEMENTS =
-  "Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum.";
-
-function sections(): ProjectSection[] {
-  return [
-    { heading: "Strategy", paragraphs: [LOREM_STRATEGY] },
-    { heading: "Design Method", paragraphs: [LOREM_METHOD] },
-    { heading: "Design Elements", paragraphs: [LOREM_ELEMENTS] },
-  ];
-}
-
 const playthicalSections: ProjectSection[] = [
   {
     heading: "Strategy",
@@ -161,6 +144,28 @@ const animalProfilesSections: ProjectSection[] = [
   },
 ];
 
+const cozyHauntedHouseSections: ProjectSection[] = [
+  {
+    heading: "Strategy",
+    paragraphs: [
+      "This project is another exercise in technical learning rather than a way to show off my design skills. I used it to keep working with the Three.JS web framework to learn how to bring deep, interactive web experiences to life. My goal was to find ways to deliver these immersive spaces to any device, anywhere, at any time, lightning fast.",
+    ],
+  },
+  {
+    heading: "Design Method",
+    paragraphs: [
+      "For this piece, I wanted to test how to bring detailed textures and rich lighting into a web scene without making the file size too heavy or slowing down how it runs. I also wanted to play around with the code to make the sun move around the house, which casts long, dramatic shadows across the ground.",
+      "Also, since it's probably not obvious, the geometry jutting out of the ground are gravestones wrapped in a tablecloth texture... Hence, the title \"Cozy Haunted House.\"",
+    ],
+  },
+  {
+    heading: "Design Elements",
+    paragraphs: [
+      "The work features detailed textures that you can zoom right into to look at closely, alongside moving lighting and shifting shadows. Everything is built to load fast and operate smoothly without any lag, no matter the device or the speed of the internet connection.",
+    ],
+  },
+];
+
 export const projects: Project[] = [
   {
     slug: "playthical",
@@ -247,7 +252,7 @@ export const projects: Project[] = [
   },
   {
     slug: "cozy-haunted-house",
-    title: "Cozy Haunted House",
+    title: "Cozy Haunted House (Exercise)",
     blurb: "Quirky haunted house simulation.",
     category: "Game / 3D",
     year: "2023",
@@ -260,7 +265,7 @@ export const projects: Project[] = [
       "/projects/cozy-haunted-house/2.png",
       "/projects/cozy-haunted-house/3.png",
     ],
-    sections: sections(),
+    sections: cozyHauntedHouseSections,
   },
 ];
 
