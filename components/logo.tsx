@@ -8,10 +8,10 @@ export function Logo({ className }: { className?: string }) {
     <Image
       src="/projects/shanil-logo.png"
       alt="Shanil Wijesinghe logo"
-      width={40}
-      height={40}
+      width={64}
+      height={64}
       priority
-      className={cn("h-10 w-10 object-contain", className)}
+      className={cn("h-14 w-14 object-contain", className)}
     />
   );
 }

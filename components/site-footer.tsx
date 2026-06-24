@@ -15,14 +15,14 @@ export function SiteFooter() {
           aria-label="LinkedIn"
           className="transition-colors hover:text-foreground"
         >
-          <Linkedin className="size-5" />
+          <Linkedin className="size-6" />
         </a>
         <a
           href={`mailto:${EMAIL}`}
           aria-label="Email"
           className="transition-colors hover:text-foreground"
         >
-          <Mail className="size-5" />
+          <Mail className="size-6" />
         </a>
       </div>
     </footer>

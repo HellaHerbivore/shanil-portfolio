@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { getProject, projects } from "@/lib/projects";
@@ -29,6 +29,10 @@ export default function ProjectPage({
 
   const [hero, ...rest] = project.gallery;
 
+  const index = projects.findIndex((p) => p.slug === project.slug);
+  const prev = projects[(index - 1 + projects.length) % projects.length];
+  const next = projects[(index + 1) % projects.length];
+
   return (
     <article className="container py-12">
       <Button variant="ghost" size="sm" asChild className="mb-8 -ml-2">
@@ -40,23 +44,10 @@ export default function ProjectPage({
 
       {/* Intro */}
       <header className="mb-10 max-w-3xl animate-fade-in-up opacity-0">
-        <p className="text-sm font-medium uppercase tracking-wide text-muted-foreground">
-          {project.category}
-        </p>
-        <h1 className="mt-2 text-4xl font-semibold tracking-tight md:text-5xl">
+        <h1 className="text-4xl font-semibold tracking-tight md:text-5xl">
           {project.title}
         </h1>
         <p className="mt-4 text-lg text-muted-foreground">{project.blurb}</p>
-        <dl className="mt-6 flex flex-wrap gap-x-10 gap-y-3 text-sm">
-          <div>
-            <dt className="text-muted-foreground">Role</dt>
-            <dd className="font-medium">{project.role}</dd>
-          </div>
-          <div>
-            <dt className="text-muted-foreground">Year</dt>
-            <dd className="font-medium">{project.year}</dd>
-          </div>
-        </dl>
       </header>
 
       {/* Top media: embed for some projects, screenshot gallery for the rest */}
@@ -94,31 +85,27 @@ export default function ProjectPage({
           </div>
         ) : (
           <div className="space-y-4">
-            <div className="relative aspect-[16/9] overflow-hidden rounded-xl border bg-muted">
-              <Image
-                src={hero}
-                alt={`${project.title} — main view`}
-                fill
-                priority
-                sizes="100vw"
-                className="object-cover object-left"
-              />
-            </div>
+            <Image
+              src={hero}
+              alt={`${project.title} — main view`}
+              width={0}
+              height={0}
+              sizes="100vw"
+              priority
+              className="h-auto w-full rounded-xl border bg-muted"
+            />
             {rest.length > 0 && (
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div className="grid grid-cols-1 items-start gap-4 sm:grid-cols-2">
                 {rest.map((src, i) => (
-                  <div
+                  <Image
                     key={src}
-                    className="relative aspect-[16/10] overflow-hidden rounded-xl border bg-muted"
-                  >
-                    <Image
-                      src={src}
-                      alt={`${project.title} — view ${i + 2}`}
-                      fill
-                      sizes="(min-width: 640px) 50vw, 100vw"
-                      className="object-cover object-left"
-                    />
-                  </div>
+                    src={src}
+                    alt={`${project.title} — view ${i + 2}`}
+                    width={0}
+                    height={0}
+                    sizes="(min-width: 640px) 50vw, 100vw"
+                    className="h-auto w-full rounded-xl border bg-muted"
+                  />
                 ))}
               </div>
             )}
@@ -140,9 +127,9 @@ export default function ProjectPage({
                 </p>
               ))}
             </div>
-            {section.palette && (
-              <div className="mt-8 flex flex-wrap gap-5">
-                {section.palette.map((color) => (
+            {(section.palette || section.paletteImage) && (
+              <div className="mt-8 flex flex-wrap items-center gap-5">
+                {section.palette?.map((color) => (
                   <div
                     key={color}
                     className="h-16 w-16 rounded-full border border-border shadow-sm"
@@ -150,11 +137,53 @@ export default function ProjectPage({
                     title={`#${color}`}
                   />
                 ))}
+                {section.paletteImage && (
+                  <Image
+                    src={section.paletteImage}
+                    alt={`${project.title} logo`}
+                    width={90}
+                    height={90}
+                    className="ml-2 h-[90px] w-[90px] object-contain"
+                  />
+                )}
               </div>
             )}
           </section>
         ))}
       </div>
+
+      {/* Prev / next navigation */}
+      <nav className="mt-20 flex items-stretch justify-between gap-6 border-t pt-8">
+        <Link
+          href={`/work/${prev.slug}`}
+          className="group flex max-w-[46%] items-center gap-3 text-muted-foreground transition-colors hover:text-foreground"
+        >
+          <ArrowLeft className="size-5 shrink-0 transition-transform group-hover:-translate-x-1" />
+          <span className="min-w-0">
+            <span className="block text-xs font-medium uppercase tracking-wide">
+              Previous
+            </span>
+            <span className="block truncate font-medium text-foreground">
+              {prev.title}
+            </span>
+          </span>
+        </Link>
+
+        <Link
+          href={`/work/${next.slug}`}
+          className="group flex max-w-[46%] items-center gap-3 text-right text-muted-foreground transition-colors hover:text-foreground"
+        >
+          <span className="min-w-0">
+            <span className="block text-xs font-medium uppercase tracking-wide">
+              Next
+            </span>
+            <span className="block truncate font-medium text-foreground">
+              {next.title}
+            </span>
+          </span>
+          <ArrowRight className="size-5 shrink-0 transition-transform group-hover:translate-x-1" />
+        </Link>
+      </nav>
     </article>
   );
 }
