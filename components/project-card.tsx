@@ -47,7 +47,7 @@ export function ProjectCard({
             <p className="text-sm text-muted-foreground">{project.blurb}</p>
           </Link>
 
-          {project.demoVideo ? (
+          {project.youtubeId ? (
             <button
               type="button"
               onClick={() => setVideoOpen(true)}
@@ -70,9 +70,9 @@ export function ProjectCard({
         </div>
       </Card>
 
-      {project.demoVideo && videoOpen && (
+      {project.youtubeId && videoOpen && (
         <VideoLightbox
-          src={project.demoVideo}
+          youtubeId={project.youtubeId}
           title={project.title}
           onClose={() => setVideoOpen(false)}
         />
@@ -82,11 +82,11 @@ export function ProjectCard({
 }
 
 function VideoLightbox({
-  src,
+  youtubeId,
   title,
   onClose,
 }: {
-  src: string;
+  youtubeId: string;
   title: string;
   onClose: () => void;
 }) {
@@ -122,13 +122,16 @@ function VideoLightbox({
         <X className="size-5" />
       </button>
 
-      <div onClick={(e) => e.stopPropagation()} className="w-full max-w-sm">
-        <video
-          src={src}
-          controls
-          autoPlay
-          playsInline
-          className="h-auto max-h-[85vh] w-full rounded-xl shadow-2xl"
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="aspect-[9/16] h-[85vh] max-w-[92vw] overflow-hidden rounded-xl shadow-2xl"
+      >
+        <iframe
+          src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0`}
+          title={`${title} demo`}
+          allow="accelerated-sensors; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+          className="h-full w-full"
         />
       </div>
     </div>

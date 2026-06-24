@@ -12,8 +12,8 @@ export type Project = {
   role: string;
   /** External link to the live project. Opens in a new tab via the card button. */
   liveUrl?: string;
-  /** Local MP4 path. When set, the card button opens this in a lightbox instead. */
-  demoVideo?: string;
+  /** YouTube video / Shorts ID. When set, the card button opens it in a lightbox. */
+  youtubeId?: string;
   /** Card thumbnail shown on the home grid. */
   thumbnail: string;
   /** 2-3 images shown at the top of the case-study page. */
@@ -110,7 +110,7 @@ export const projects: Project[] = [
     category: "Game / Interactive",
     year: "2024",
     role: "Concept & Design",
-    demoVideo: "/projects/pocket-sanctuary-demo.mp4",
+    youtubeId: "uSJ_FJRzZVk",
     thumbnail: "/projects/pocket-sanctuary.png",
     gallery: [
       "/placeholders/pocket-sanctuary.svg",
