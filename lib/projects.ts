@@ -3,6 +3,8 @@ export type ProjectSection = {
   paragraphs: string[];
   /** Optional hex colors (without #) rendered as a palette of circles. */
   palette?: string[];
+  /** Optional image shown to the right of the palette (e.g. a logo). */
+  paletteImage?: string;
 };
 
 export type Project = {
@@ -50,6 +52,7 @@ const playthicalSections: ProjectSection[] = [
       "For the palette, my favourite shade is a Byzantine red, but I softened it into a warm red-orange. This keeps the site from looking too alarming and instead signals warmth, trust, and depth. To complete the look, I paired it with a dark charcoal grey and a creamy white for high-contrast reading. I also chose to feature happy animals from WeAnimals, including a wonderful photograph of a fox playing with an orange frisbee.",
     ],
     palette: ["f14b32", "333333", "f5f3ef", "6a9d2c"],
+    paletteImage: "/projects/shanil-logo.png",
   },
 ];
 
@@ -57,7 +60,7 @@ const antagonistSections: ProjectSection[] = [
   {
     heading: "Strategy",
     paragraphs: [
-      "This project is a website for an investigative documentary about how a life-saving drug called Naltraxone was held back while the fentanyl crisis tore through American cities. The film needed to find more financial backers and build up its standing for film festivals.",
+      "This project is a website for an investigative documentary about how a life-saving drug called Naltrexone was held back while the fentanyl crisis tore through American cities. The film needed to find more financial backers and build up its standing for film festivals.",
       "To meet these goals, I advised the director to set up a Patreon page and funnel all web traffic toward it. We anchored a Patreon button at the top of the page and made it the final call to action at the end. I also looked for a strong way to grip visitors right away. The director had been interviewed on Joe Rogan's podcast, so I used an earnest quote from that talk to hook viewers and give the film instant weight.",
     ],
   },
