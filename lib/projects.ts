@@ -14,6 +14,12 @@ export type Project = {
   liveUrl?: string;
   /** YouTube video / Shorts ID. When set, the card button opens it in a lightbox. */
   youtubeId?: string;
+  /**
+   * What to show at the top of the case-study page.
+   * Omitted -> the screenshot gallery. "site" -> embed liveUrl in an iframe.
+   * "youtube" -> embed the youtubeId video.
+   */
+  heroEmbed?: "site" | "youtube";
   /** Card thumbnail shown on the home grid. */
   thumbnail: string;
   /** 2-3 images shown at the top of the case-study page. */
@@ -95,6 +101,7 @@ export const projects: Project[] = [
     year: "2024",
     role: "Design & Front-End",
     liveUrl: "https://animal-profiles.vercel.app/",
+    heroEmbed: "site",
     thumbnail: "/projects/animal-profiles.png",
     gallery: [
       "/projects/animal-profiles/1.png",
@@ -111,6 +118,7 @@ export const projects: Project[] = [
     year: "2024",
     role: "Concept & Design",
     youtubeId: "uSJ_FJRzZVk",
+    heroEmbed: "youtube",
     thumbnail: "/projects/pocket-sanctuary.png",
     gallery: [
       "/projects/pocket-sanctuary/1.png",
@@ -127,6 +135,7 @@ export const projects: Project[] = [
     year: "2023",
     role: "Concept & Design",
     liveUrl: "https://cozy-haunted-house.vercel.app/",
+    heroEmbed: "site",
     thumbnail: "/projects/cozy-haunted-house.png",
     gallery: [
       "/projects/cozy-haunted-house/1.png",
