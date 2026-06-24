@@ -143,7 +143,7 @@ export default function ProjectPage({
                     alt={`${project.title} logo`}
                     width={90}
                     height={90}
-                    className="ml-2 h-[90px] w-[90px] object-contain"
+                    className="ml-auto h-[90px] w-[90px] object-contain"
                   />
                 )}
               </div>
