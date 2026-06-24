@@ -84,6 +84,7 @@ export const projects: Project[] = [
       "/projects/yoga-with-lali/1.png",
       "/projects/yoga-with-lali/2.png",
       "/projects/yoga-with-lali/3.png",
+      "/projects/yoga-with-lali/4.png",
     ],
     sections: sections(),
   },
