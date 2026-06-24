@@ -141,9 +141,9 @@ export default function ProjectPage({
                   <Image
                     src={section.paletteImage}
                     alt={`${project.title} logo`}
-                    width={90}
-                    height={90}
-                    className="ml-auto h-[90px] w-[90px] object-contain"
+                    width={180}
+                    height={180}
+                    className="ml-auto h-[180px] w-[180px] object-contain"
                   />
                 )}
               </div>
