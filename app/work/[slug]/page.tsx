@@ -3,7 +3,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
 import { getProject, projects } from "@/lib/projects";
 
 export function generateStaticParams() {
@@ -35,12 +34,13 @@ export default function ProjectPage({
 
   return (
     <article className="container py-12">
-      <Button variant="ghost" size="sm" asChild className="mb-8 -ml-2">
-        <Link href="/">
-          <ArrowLeft />
-          Back to work
-        </Link>
-      </Button>
+      <Link
+        href="/"
+        className="group mb-8 inline-flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
+      >
+        <ArrowLeft className="size-5 shrink-0 transition-transform group-hover:-translate-x-1" />
+        <span className="font-medium">Back to work</span>
+      </Link>
 
       {/* Intro */}
       <header className="mb-10 max-w-3xl animate-fade-in-up opacity-0">
