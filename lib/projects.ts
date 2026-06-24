@@ -94,6 +94,28 @@ const antagonistSections: ProjectSection[] = [
   },
 ];
 
+const yogaSections: ProjectSection[] = [
+  {
+    heading: "Strategy",
+    paragraphs: [
+      "Lali is my wife, and I thought it would be a wonderful birthday gift to build a website for her fast-maturing yoga practice. She needed to shift from setting up informal classes to showing a professional brand, especially as she began getting hired to teach larger groups holidaying in Sri Lanka. She also hopes to bring her love for children and her dedication to yoga together by teaching kids. Because of this, building trust was a guiding rule for the site. One way I did this was by showing that Lali teaches yoga rooted deeply in its true bedrock. For instance, most teachers today do not know the first yama of yoga, or they just gloss over it. But this first step, ahimsa, which means non-violence, is a baseline that takes years to master and calls for a dedication to a satvic, South Asian vegan diet.",
+    ],
+  },
+  {
+    heading: "Design Method",
+    paragraphs: [
+      "A big challenge Lali faces is that it is hard to stand out from other yoga teachers since the practice has become so widespread. To solve this, I leaned heavily into showcasing her true dedication to ahimsa all through the website. I have also noticed that a successful yoga teacher now wins over students through their own personality. This is why I chose to feature Lali's face clearly and worked to build a feeling that she is speaking straight to the reader.",
+    ],
+  },
+  {
+    heading: "Design Elements",
+    paragraphs: [
+      "To help build trust, I put in a moving number ticker that draws the eye to Lali's years of practice and the number of students she has taught. I also added a \"Tip of the Day\" space about yoga history and teachings. This lets Lali share the deeper roots of the practice that are often lost in white-washed Lululemon style. To truly honour the roots of yoga, I looked up exactly how to write ahimsa with both Devanagari script accents and Latin marks, and I picked a font that handles both beautifully. Finally, I used the colour palette to stand out. Most yoga influencer sites use soft pastel shades. To match Lali's grounded brand, I chose a bolder set of colours inspired by Mughal and South Indian medieval art. I even found old paintings that used a shade of lilac, which is Lali's favourite colour, and used it for the final call to action button.",
+    ],
+    palette: ["0b5c4a", "3d7f84", "a45241", "c2a14d", "f5eddb", "bd8f97"],
+  },
+];
+
 export const projects: Project[] = [
   {
     slug: "playthical",
@@ -142,7 +164,7 @@ export const projects: Project[] = [
       "/projects/yoga-with-lali/3.png",
       "/projects/yoga-with-lali/4.png",
     ],
-    sections: sections(),
+    sections: yogaSections,
   },
   {
     slug: "animal-profiles",
