@@ -4,7 +4,17 @@ import { projects } from "@/lib/projects";
 export default function HomePage() {
   return (
     <div className="container py-16">
-      <header className="mb-12 animate-fade-in">
+      <section className="mb-14 max-w-2xl animate-fade-in">
+        <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
+          I look for fresh ways to help the animal advocacy movement through
+          design. Drawing on my roots in game design, I build playful and
+          interactive web pieces that change how people connect with a cause. I
+          believe we can build deep trust and win more support for animals by
+          making online spaces engaging, smooth, and fun to explore.
+        </p>
+      </section>
+
+      <header className="mb-10 animate-fade-in">
         <h1 className="text-3xl font-semibold tracking-tight md:text-4xl">
           Selected Work
         </h1>
@@ -15,10 +25,6 @@ export default function HomePage() {
           <ProjectCard key={project.slug} project={project} index={i} />
         ))}
       </div>
-
-      <p className="mt-10 text-right text-xs text-muted-foreground">
-        Clicking a project opens its case study page.
-      </p>
     </div>
   );
 }
