@@ -117,7 +117,7 @@ export const projects: Project[] = [
     category: "Game / 3D",
     year: "2023",
     role: "Concept & Design",
-    thumbnail: "/placeholders/cozy-haunted-house.svg",
+    thumbnail: "/projects/cozy-haunted-house.png",
     gallery: [
       "/placeholders/cozy-haunted-house.svg",
       "/placeholders/cozy-haunted-house-2.svg",
