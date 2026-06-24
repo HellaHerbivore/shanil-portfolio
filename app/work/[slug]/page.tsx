@@ -133,9 +133,25 @@ export default function ProjectPage({
             <h2 className="text-2xl font-semibold tracking-tight">
               {section.heading}
             </h2>
-            <p className="mt-3 leading-relaxed text-muted-foreground">
-              {section.body}
-            </p>
+            <div className="mt-3 space-y-4">
+              {section.paragraphs.map((paragraph, i) => (
+                <p key={i} className="leading-relaxed text-muted-foreground">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+            {section.palette && (
+              <div className="mt-8 flex flex-wrap gap-5">
+                {section.palette.map((color) => (
+                  <div
+                    key={color}
+                    className="h-16 w-16 rounded-full border border-border shadow-sm"
+                    style={{ backgroundColor: `#${color}` }}
+                    title={`#${color}`}
+                  />
+                ))}
+              </div>
+            )}
           </section>
         ))}
       </div>
