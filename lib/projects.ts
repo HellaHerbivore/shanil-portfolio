@@ -10,6 +10,10 @@ export type Project = {
   category: string;
   year: string;
   role: string;
+  /** External link to the live project. Opens in a new tab via the card button. */
+  liveUrl?: string;
+  /** Local MP4 path. When set, the card button opens this in a lightbox instead. */
+  demoVideo?: string;
   /** Card thumbnail shown on the home grid. */
   thumbnail: string;
   /** 2-3 images shown at the top of the case-study page. */
@@ -42,6 +46,7 @@ export const projects: Project[] = [
     category: "Product / Web",
     year: "2025",
     role: "Design & Front-End",
+    liveUrl: "https://www.playthical.com/",
     thumbnail: "/projects/playthical.png",
     gallery: [
       "/placeholders/playthical.svg",
@@ -57,6 +62,7 @@ export const projects: Project[] = [
     category: "Marketing / Web",
     year: "2025",
     role: "Art Direction & Build",
+    liveUrl: "https://www.antagonistfilm.com/",
     thumbnail: "/projects/antagonist.png",
     gallery: [
       "/placeholders/antagonist.svg",
@@ -72,6 +78,7 @@ export const projects: Project[] = [
     category: "Brand / Web",
     year: "2024",
     role: "Design & Front-End",
+    liveUrl: "https://yoga-with-lali.vercel.app/",
     thumbnail: "/projects/yoga-with-lali.png",
     gallery: [
       "/placeholders/yoga-with-lali.svg",
@@ -87,6 +94,7 @@ export const projects: Project[] = [
     category: "Data Viz / Web",
     year: "2024",
     role: "Design & Front-End",
+    liveUrl: "https://animal-profiles.vercel.app/",
     thumbnail: "/projects/animal-profiles.png",
     gallery: [
       "/placeholders/animal-profiles.svg",
@@ -102,6 +110,7 @@ export const projects: Project[] = [
     category: "Game / Interactive",
     year: "2024",
     role: "Concept & Design",
+    demoVideo: "/projects/pocket-sanctuary-demo.mp4",
     thumbnail: "/projects/pocket-sanctuary.png",
     gallery: [
       "/placeholders/pocket-sanctuary.svg",
@@ -117,6 +126,7 @@ export const projects: Project[] = [
     category: "Game / 3D",
     year: "2023",
     role: "Concept & Design",
+    liveUrl: "https://cozy-haunted-house.vercel.app/",
     thumbnail: "/projects/cozy-haunted-house.png",
     gallery: [
       "/placeholders/cozy-haunted-house.svg",
