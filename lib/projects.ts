@@ -70,6 +70,30 @@ const playthicalSections: ProjectSection[] = [
   },
 ];
 
+const antagonistSections: ProjectSection[] = [
+  {
+    heading: "Strategy",
+    paragraphs: [
+      "This project is a website for an investigative documentary about how a life-saving drug called Naltraxone was held back while the fentanyl crisis tore through American cities. The film needed to find more financial backers and build up its standing for film festivals.",
+      "To meet these goals, I advised the director to set up a Patreon page and funnel all web traffic toward it. We anchored a Patreon button at the top of the page and made it the final call to action at the end. I also looked for a strong way to grip visitors right away. The director had been interviewed on Joe Rogan's podcast, so I used an earnest quote from that talk to hook viewers and give the film instant weight.",
+    ],
+  },
+  {
+    heading: "Design Method",
+    paragraphs: [
+      "We began by locking in a dark, serious, and dramatic tone. Once the director agreed on this feeling, I looked to the documentary Christspiracy for inspiration, using similar fonts and placing a soft-edged, vignetted trailer at the top of the page.",
+      "For the user flow, I chose to follow paths that already work well rather than starting from scratch. I researched how Netflix lays out the films it wants to feature, since they have spent a lot of time and money finding the best design. I used their framework to map out a smooth, gripping flow for our visitors.",
+    ],
+  },
+  {
+    heading: "Design Elements",
+    paragraphs: [
+      "The colour palette is built on deep, dark shades, with a dull gold that cuts through the darkness to highlight key areas. To build tension, the site opens with a scrolling animation. Visitors see a moving line of shocking quotes, facts, and figures before the movement settles to reveal the main film banner.",
+    ],
+    palette: ["1c1b1e", "222126", "eee9ea", "643f33", "a98e3f"],
+  },
+];
+
 export const projects: Project[] = [
   {
     slug: "playthical",
@@ -101,7 +125,7 @@ export const projects: Project[] = [
       "/projects/antagonist/2.png",
       "/projects/antagonist/3.png",
     ],
-    sections: sections(),
+    sections: antagonistSections,
   },
   {
     slug: "yoga-with-lali",
