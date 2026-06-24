@@ -1,6 +1,8 @@
 export type ProjectSection = {
   heading: string;
-  body: string;
+  paragraphs: string[];
+  /** Optional hex colors (without #) rendered as a palette of circles. */
+  palette?: string[];
 };
 
 export type Project = {
@@ -38,11 +40,35 @@ const LOREM_ELEMENTS =
 
 function sections(): ProjectSection[] {
   return [
-    { heading: "Strategy", body: LOREM_STRATEGY },
-    { heading: "Design Method", body: LOREM_METHOD },
-    { heading: "Elements of the Design", body: LOREM_ELEMENTS },
+    { heading: "Strategy", paragraphs: [LOREM_STRATEGY] },
+    { heading: "Design Method", paragraphs: [LOREM_METHOD] },
+    { heading: "Design Elements", paragraphs: [LOREM_ELEMENTS] },
   ];
 }
+
+const playthicalSections: ProjectSection[] = [
+  {
+    heading: "Strategy",
+    paragraphs: [
+      "After going vegan, I shifted my work to set up Playthical in 2023. My main goal for the website was to get people to reach out to me, since most of my client relationships start with personal chats. I placed a clear button right at the top that links smoothly to my booking page.",
+      "At the same time, I needed the site to build trust. People often think of gaming as a playful extra rather than a powerful way to make a real difference for animals at scale. I wanted this digital front to show our weight, build credibility, and state exactly what we do in plain words.",
+    ],
+  },
+  {
+    heading: "Design Method",
+    paragraphs: [
+      "I began by looking at what charities in the animal advocacy movement expect to see. Most are used to clean, section-by-section websites, so I chose bold fonts and solid colours to ground the site in professionalism. Still, I had to walk a fine line between being playful and being serious. I drew a lot of inspiration from the layouts of Salesforce and Animals Australia to find that right mix of business and purpose.",
+    ],
+  },
+  {
+    heading: "Design Elements",
+    paragraphs: [
+      "The logo features a red fox, which is one of the most playful animals in the world. Because of the studio's roots in gaming, I wanted to give the fox a mythical twist, so I added traits of a deer to bring in some plant-eating energy. Along the way, I learned that foxes are omnivores and do not have to eat meat, meaning they have the potential to be vegan.",
+      "For the palette, my favourite shade is a Byzantine red, but I softened it into a warm red-orange. This keeps the site from looking too alarming and instead signals warmth, trust, and depth. To complete the look, I paired it with a dark charcoal grey and a creamy white for high-contrast reading. I also chose to feature happy animals from WeAnimals, including a wonderful photograph of a fox playing with an orange frisbee.",
+    ],
+    palette: ["f14b32", "333333", "f5f3ef", "6a9d2c"],
+  },
+];
 
 export const projects: Project[] = [
   {
@@ -59,7 +85,7 @@ export const projects: Project[] = [
       "/projects/playthical/2.png",
       "/projects/playthical/3.png",
     ],
-    sections: sections(),
+    sections: playthicalSections,
   },
   {
     slug: "antagonist",
