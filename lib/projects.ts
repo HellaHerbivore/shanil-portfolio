@@ -42,7 +42,7 @@ export const projects: Project[] = [
     category: "Product / Web",
     year: "2025",
     role: "Design & Front-End",
-    thumbnail: "/placeholders/playthical.svg",
+    thumbnail: "/projects/playthical.png",
     gallery: [
       "/placeholders/playthical.svg",
       "/placeholders/playthical-2.svg",
@@ -57,7 +57,7 @@ export const projects: Project[] = [
     category: "Marketing / Web",
     year: "2025",
     role: "Art Direction & Build",
-    thumbnail: "/placeholders/antagonist.svg",
+    thumbnail: "/projects/antagonist.png",
     gallery: [
       "/placeholders/antagonist.svg",
       "/placeholders/antagonist-2.svg",
@@ -72,7 +72,7 @@ export const projects: Project[] = [
     category: "Brand / Web",
     year: "2024",
     role: "Design & Front-End",
-    thumbnail: "/placeholders/yoga-with-lali.svg",
+    thumbnail: "/projects/yoga-with-lali.png",
     gallery: [
       "/placeholders/yoga-with-lali.svg",
       "/placeholders/yoga-with-lali-2.svg",
@@ -87,7 +87,7 @@ export const projects: Project[] = [
     category: "Data Viz / Web",
     year: "2024",
     role: "Design & Front-End",
-    thumbnail: "/placeholders/animal-profiles.svg",
+    thumbnail: "/projects/animal-profiles.png",
     gallery: [
       "/placeholders/animal-profiles.svg",
       "/placeholders/animal-profiles-2.svg",
@@ -102,7 +102,7 @@ export const projects: Project[] = [
     category: "Game / Interactive",
     year: "2024",
     role: "Concept & Design",
-    thumbnail: "/placeholders/pocket-sanctuary.svg",
+    thumbnail: "/projects/pocket-sanctuary.png",
     gallery: [
       "/placeholders/pocket-sanctuary.svg",
       "/placeholders/pocket-sanctuary-2.svg",
