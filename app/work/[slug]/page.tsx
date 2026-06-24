@@ -13,7 +13,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   const project = getProject(params.slug);
   if (!project) return {};
   return {
-    title: `${project.title} — Shanil Wijesinghe`,
+    title: `${project.title} | Shanil`,
     description: project.blurb,
   };
 }
