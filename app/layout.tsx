@@ -12,7 +12,7 @@ const laila = Laila({
 });
 
 export const metadata: Metadata = {
-  title: "Shanil Wijesinghe — Selected Work",
+  title: "Portfolio | Shanil",
   description: "Portfolio of selected design and front-end work.",
 };
 
