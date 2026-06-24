@@ -116,6 +116,29 @@ const yogaSections: ProjectSection[] = [
   },
 ];
 
+const pocketSanctuarySections: ProjectSection[] = [
+  {
+    heading: "Strategy",
+    paragraphs: [
+      "I believe that video game design has huge power to help the animal advocacy movement in many ways, whether we are showing impact reports or building interactive donation pages. Right now, a big struggle in our movement is that people get deeply tired and burned out from online pressure campaigns. When a supporter writes a complaint on Instagram about a company, it can take years to see any shift, if it happens at all.",
+      "Pocket Animal Sanctuary is a project I am building to change this. It acts as a virtual space where your real-world actions, like signing a petition, leaving a comment, or giving a donation, feed into a virtual sanctuary that grows and thrives. This gives people a clear, uplifting digital footprint of their personal work for animals.",
+    ],
+  },
+  {
+    heading: "Design Method",
+    paragraphs: [
+      "My vision was to make a game that spreads far beyond the core animal advocacy crowd and normalises taking action for animals. To reach a broad audience, I chose a cosy style. I drew a lot of inspiration from cosy games that I am personally drawn to and that are trending right now, like Tiny Glade, Townscaper, Animal Crossing, and Stardew Valley.",
+      "To keep the gameplay relaxing and lower the mental load, the player's choices are purposefully small. You choose from just three actions that change from time to time. Some are simple, like eating plant-based for the day, while harder ones involve making a public comment or donating to a featured charity. The sanctuary then shapes itself based on these choices.",
+    ],
+  },
+  {
+    heading: "Design Elements",
+    paragraphs: [
+      "The visual style relies on cosy, warm, and subdued colours with soft lighting to create a calm space. The main screen shows an uncluttered open field with grass that sways gently in the wind. To add a deep personal touch to the setting, I used real sounds of the wind that I recorded on the island of Lanka. The interface stays very clean, showing only one to three buttons on the screen at any given time so the player never feels overwhelmed.",
+    ],
+  },
+];
+
 export const projects: Project[] = [
   {
     slug: "playthical",
@@ -184,7 +207,7 @@ export const projects: Project[] = [
   },
   {
     slug: "pocket-sanctuary",
-    title: "Pocket Sanctuary",
+    title: "Pocket Sanctuary (Work in Progress)",
     blurb: "Cozy animal sanctuary game.",
     category: "Game / Interactive",
     year: "2024",
@@ -197,7 +220,7 @@ export const projects: Project[] = [
       "/projects/pocket-sanctuary/2.png",
       "/projects/pocket-sanctuary/3.png",
     ],
-    sections: sections(),
+    sections: pocketSanctuarySections,
   },
   {
     slug: "cozy-haunted-house",
