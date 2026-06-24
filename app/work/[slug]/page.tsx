@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ArrowUpRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { getProject, projects } from "@/lib/projects";
@@ -59,34 +59,69 @@ export default function ProjectPage({
         </dl>
       </header>
 
-      {/* Gallery */}
-      <section className="mb-16 space-y-4 animate-fade-in opacity-0 [animation-delay:150ms]">
-        <div className="relative aspect-[16/9] overflow-hidden rounded-xl border bg-muted">
-          <Image
-            src={hero}
-            alt={`${project.title} — main view`}
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover"
-          />
-        </div>
-        {rest.length > 0 && (
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {rest.map((src, i) => (
-              <div
-                key={src}
-                className="relative aspect-[16/10] overflow-hidden rounded-xl border bg-muted"
-              >
-                <Image
-                  src={src}
-                  alt={`${project.title} — view ${i + 2}`}
-                  fill
-                  sizes="(min-width: 640px) 50vw, 100vw"
-                  className="object-cover"
-                />
+      {/* Top media: embed for some projects, screenshot gallery for the rest */}
+      <section className="mb-16 animate-fade-in opacity-0 [animation-delay:150ms]">
+        {project.heroEmbed === "youtube" && project.youtubeId ? (
+          <div className="mx-auto aspect-[9/16] w-full max-w-[360px] overflow-hidden rounded-xl border bg-muted shadow-sm">
+            <iframe
+              src={`https://www.youtube.com/embed/${project.youtubeId}?rel=0`}
+              title={`${project.title} demo`}
+              allow="accelerated-sensors; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="h-full w-full"
+            />
+          </div>
+        ) : project.heroEmbed === "site" && project.liveUrl ? (
+          <div className="space-y-3">
+            <div className="overflow-hidden rounded-xl border bg-muted shadow-sm">
+              <iframe
+                src={project.liveUrl}
+                title={`${project.title} live project`}
+                loading="lazy"
+                allow="fullscreen"
+                className="h-[70vh] min-h-[420px] w-full"
+              />
+            </div>
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            >
+              Open the live project
+              <ArrowUpRight className="size-4" />
+            </a>
+          </div>
+        ) : (
+          <div className="space-y-4">
+            <div className="relative aspect-[16/9] overflow-hidden rounded-xl border bg-muted">
+              <Image
+                src={hero}
+                alt={`${project.title} — main view`}
+                fill
+                priority
+                sizes="100vw"
+                className="object-cover object-left"
+              />
+            </div>
+            {rest.length > 0 && (
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                {rest.map((src, i) => (
+                  <div
+                    key={src}
+                    className="relative aspect-[16/10] overflow-hidden rounded-xl border bg-muted"
+                  >
+                    <Image
+                      src={src}
+                      alt={`${project.title} — view ${i + 2}`}
+                      fill
+                      sizes="(min-width: 640px) 50vw, 100vw"
+                      className="object-cover object-left"
+                    />
+                  </div>
+                ))}
               </div>
-            ))}
+            )}
           </div>
         )}
       </section>
