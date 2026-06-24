@@ -173,7 +173,7 @@ export const projects: Project[] = [
   {
     slug: "playthical",
     title: "Playthical",
-    blurb: "Gamified volunteer platform.",
+    blurb: "Gamified animal advocacy website.",
     category: "Product / Web",
     year: "2025",
     role: "Design & Front-End",
@@ -189,7 +189,8 @@ export const projects: Project[] = [
   {
     slug: "antagonist",
     title: "Antagonist",
-    blurb: "Addiction documentary landing page.",
+    blurb:
+      "Investigative documentary website about the fentanyl crisis and a suppressed cure.",
     category: "Marketing / Web",
     year: "2025",
     role: "Art Direction & Build",
@@ -205,7 +206,7 @@ export const projects: Project[] = [
   {
     slug: "yoga-with-lali",
     title: "Yoga With Lali",
-    blurb: "Wellness and meditation guide.",
+    blurb: "Yoga practitioner's website.",
     category: "Brand / Web",
     year: "2024",
     role: "Design & Front-End",
@@ -221,7 +222,8 @@ export const projects: Project[] = [
   {
     slug: "animal-profiles",
     title: "Animal Profiles — Impact of a Donation (Exercise)",
-    blurb: "Interactive donation impact tracker.",
+    blurb:
+      "Conceptualizing the impact of a donation visualized in 3D space.",
     category: "Data Viz / Web",
     year: "2024",
     role: "Design & Front-End",
@@ -255,7 +257,7 @@ export const projects: Project[] = [
   {
     slug: "cozy-haunted-house",
     title: "Cozy Haunted House (Exercise)",
-    blurb: "Quirky haunted house simulation.",
+    blurb: "Learning texturing and lighting for 3D web experiences.",
     category: "Game / 3D",
     year: "2023",
     role: "Concept & Design",
