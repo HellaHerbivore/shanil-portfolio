@@ -4,7 +4,7 @@ import { projects } from "@/lib/projects";
 export default function HomePage() {
   return (
     <div className="container py-16">
-      <section className="mb-14 max-w-2xl animate-fade-in">
+      <section className="mb-14 mx-auto max-w-2xl text-center animate-fade-in">
         <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
           I look for fresh ways to help the animal advocacy movement through
           design. Drawing on my roots in game design, I build playful and
@@ -14,7 +14,7 @@ export default function HomePage() {
         </p>
       </section>
 
-      <header className="mb-10 animate-fade-in">
+      <header className="mb-10 text-center animate-fade-in">
         <h1 className="text-3xl font-semibold tracking-tight md:text-4xl">
           Selected Work
         </h1>

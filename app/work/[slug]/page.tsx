@@ -43,7 +43,7 @@ export default function ProjectPage({
       </Link>
 
       {/* Intro */}
-      <header className="mb-10 max-w-3xl animate-fade-in-up opacity-0">
+      <header className="mb-10 mx-auto max-w-3xl text-center animate-fade-in-up opacity-0">
         <h1 className="text-4xl font-semibold tracking-tight md:text-5xl">
           {project.title}
         </h1>
